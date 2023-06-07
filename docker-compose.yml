@@ -1,8 +1,15 @@
 version: '3'
 services:
-  clothes:
+  happy:
     image: satishjagana/myapp:dunzo-v1
     ports:
       - "90:80"
+    deploy:
+      replicas: 3
+
+  sad:
+    image: satishjagana/myapp:sad-image1
+    ports:
+      - "91:80"
     deploy:
       replicas: 3
